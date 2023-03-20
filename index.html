@@ -2,14 +2,23 @@
 <html>
     <head>
         <title>Jesse Practice Project</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div>
             <h1 class="heading">Jesse Practice Project</h1>
             <div>
-                <button class="button">Button 1</button>
-                <button class="button">Button 2</button>
+                <!-- This button will cause a dropdown to appear -->
+                <button class="button-dropdown" id="button-dropdown">Dropdown</button>
+                <div class="dropdown-hidden" id="dropdown">
+                    <a href="https://www.youtube.com">Link 1</a>
+                    <a href="contact.html">Link 2</a>
+                    <a href="testimonials.html">Link 3</a>
+                </div>
             </div>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
+
+

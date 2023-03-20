@@ -1,3 +1,107 @@
-.heading {
-    
+/* 
+    Welcome to CSS. This is how you can style your HTML elements to make them look better/different than default.
+    This green text is a comment, and is not read by the browser. It is used to explain what the code does to the developer (you, or me).
+    To make a comment in CSS, you simply put a forward slash followed by a star, and then the comment, and then a star followed by a forward slash.
+    Comments exist in almost every language, including HTML and JavaScript. But they have different syntax in each language.
+    For HTML, you use the < !-- and -- > tags to make a comment.
+    For JavaScript, you use the forward slash followed by a forward slash to make a comment, like this: //This is a comment.
+    The code is written in a block, and each line is ended with a semicolon.
+    The block is defined by enclosing it in curly brackets.
+    The block is called a CSS rule, and the code inside it is called CSS declarations.
+    The CSS declarations are made up of a property and a value, separated by a colon.
+    The property is the part that you want to change, and the value is the part that you want to change it to.
+    The value can be a number, a color, or a string.
+    The value can also be a function, which is a block of code that is executed when the property is called. But don't worry about that for now.
+    The value can also be a variable, which is a value that can be changed. But don't worry about that yet either.
+    For example, when you set the "background" property to a value of "red", it will change the background of the class you're styling to red.
+    A class is an attribute added to any HTML element, and is used to style it.
+    To do this, add the attribute to HTML like this example: <div class="my-class"></div>.
+    The above example shows a class on a div element, but you can do the same for any other element such as an <img> element.
+    You can also add multiple classes to an element using a space between them, like this: <div class="my-class another-class"></div>.
+    You can also add an ID to an element, which is similar to a class, but is only used on one element, not multiple like you can do with classes.
+    To add an ID, use the "id" attribute, like this: <div id="my-id"></div>.
+    You can also add multiple IDs to an element, but it is not recommended.
+    So, how do we target the class of an element to style it?
+    You can do this by using a CSS selector, which is a block of code that selects the element you want to style.
+    The most common selector is the class selector, which is a dot followed by the name of the class, like this: .my-class.
+    You can also use an ID selector, which is a hash followed by the name of the ID, like this: #my-id.
+    You can also use a tag selector, which is the name of the tag, like this: div. However in most cases this is not ideal, as it will style all elements of that type.
+    You can also use a universal selector, which is a star, like this: *. Doing this will style all elements on the page.
+    You can also use a child selector, which is a greater than sign, like this: div > p. This will style all p elements that are a child of a div element.
+    You can also use an adjacent sibling selector, which is a plus sign, like this: div + p. This will style all p elements that are next to a div element.
+    You can also use a general sibling selector, which is a tilde, like this: div ~ p. This will style all p elements that are next to a div element, or are a child of a div element.
+    You can also use an attribute selector, which is a square bracket, like this: [href]. This will style all elements that have a href attribute.
+    You can also use a pseudo-class selector, which is a colon, like this: p:hover. This will style all p elements when you hover over them. This is useful for things like when you hover the mouse over a button, it changes color.
+    You can also use a pseudo-element selector, which is a double colon, like this: p::first-letter. This will style the first letter of all p elements.
+    You can also use a negation pseudo-class selector, which is a colon followed by a not, like this: :not(p). This will style all elements that are not p elements.
+    You can also use a combinator selector, which is a space, like this: div p. This will style all p elements that are a child of a div element.
+    Now, how do we format this selector and combine it with a block of code (or a 'rule') to style an element?
+    For this, we simply code the selector, followed by a space, followed by the block of code.
+    For example, if we wanted to style all p elements that are a child of a div element, we would code:
+    div p {
+        color: red;
+    }
+    Or, for a class selector, we would code:
+    .my-class {
+        color: red;
+    }
+    Color codes in CSS can be regular names (i.e. "red"), hexadecimal codes (i.e. "#ff0000"), or RGB codes (i.e. "rgb(255, 0, 0)").
+    Hexadecimal is my favorite but all of them are valid. However, using regular names is not usually specific enough.
+*/
+
+/*
+This class is used to style the button that opens the dropdown menu.
+(the code block is called CSS rules, and the block of code is defined by enclosing it in curly brackets)
+*/
+.button-dropdown {
+    /* Background color */
+    background: rgb(255, 0, 0);
+    /* Text color */
+    color: white;
+    /* Padding (makes the element bigger) */
+    padding: 10px;
+
+    /* Border around the element */
+    border: none;
+    /* This tells the element to change your cursor to a pointing hand when you hover over it */
+    cursor: pointer;
+    /* This sets the curvature of the border, if set to 50%, you can make a circular element */
+    border-radius: 5px;
+}
+
+/* This block of code will only apply if the mouse is hovering over the button element. And all it does is set the background to a slightly darker red color. */
+.button-dropdown:hover {
+    background: rgb(148, 0, 0);
+}
+
+.dropdown {
+    /* You can also define more specific color values using hexadecimal coloring. Formatted like this: #ffffff (white). To get colors hexadecimal values, you can go to a website and copy/paste the color code. */
+    background: #0b7edd;
+    width: 200px;
+    height: 250px;
+
+    border-radius: 6px;
+    /* The box-shadow property lets you add a shadow behind the element. */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    /* The following properties are using Flexbox, which you'll learn more about with Mimo. */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown a {
+    /* This sets the text decoration to none, which means it will not have any underlines or strikethroughs */
+    text-decoration: none;
+    /* This sets the text color to white */
+    color: white;
+    /* This sets the font size to 20px */
+    font-size: 20px;
+}
+
+/* This rule is for when the menu is closed and not being shown to the user. Using JavaScript, we can switch between this class and the regular ".dropdown" one to hide/show the menu, respectively. */
+.dropdown-hidden {
+    /* display: none; will effectively take out the element from the HTML so that, to the user, it doesn't exist. */
+    display: none;
 }
